@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>Bike Bhutan — Downhill Cycling from Dochula to Punakha</title>
+  <meta name="description" content="30 km of pure downhill cycling through the Kingdom of Bhutan. Start at Dochula Pass (9,100 ft), descend 1,900 m through ancient forests and sacred sites, finish at Punakha Dzong. Zero uphill. 100% smiles." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bikebhutan.bt/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bikebhutan.bt/" />
+  <meta property="og:title"       content="Bike Bhutan — Pure Downhill Adventure" />
+  <meta property="og:description" content="30 km of pure downhill from Dochula Pass to Punakha Valley. Zero uphill. Expert guide. Ancient temples and Himalayan views." />
+  <meta property="og:image"       content="images/og-image.jpg" />
+  <meta property="og:locale"      content="en_BT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Bike Bhutan — Pure Downhill Adventure" />
+  <meta name="twitter:description" content="30 km of pure downhill from Dochula Pass to Punakha Valley." />
+  <meta name="twitter:image"       content="images/og-image.jpg" />
+
+  <!-- Theme colour (browser chrome on mobile) -->
+  <meta name="theme-color" content="#0D2818" />
+
+  <!-- Security Headers via meta (complement server-level headers) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Apply saved theme before CSS renders to prevent flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('bikebhutan-theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }());
+  </script>
+
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- ─── SCROLL PROGRESS ──────────────────────────────────────────── -->
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Bike Bhutan — home">
+      <img src="images/logo.png" alt="Bike Bhutan" class="logo-img" />
+    </a>
+
+    <div class="nav-links" role="menubar">
+      <a href="#experience" role="menuitem">The Ride</a>
+      <a href="#culture"    role="menuitem">Culture</a>
+      <a href="#included"   role="menuitem">Included</a>
+      <a href="#book"       role="menuitem" class="nav-cta">Book Now</a>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <!-- Sun: shown in dark mode to switch back to light -->
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- Moon: shown in light mode to switch to dark -->
+      <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <button
+      class="nav-hamburger"
+      id="nav-hamburger"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="nav-mobile"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#experience">The Ride</a>
+    <a href="#culture">Culture</a>
+    <a href="#included">Included</a>
+    <a href="#book" class="nav-cta">Book Now</a>
+  </nav>
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────────── -->
+  <section id="hero" aria-label="Hero — Bike Bhutan">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-atmosphere" aria-hidden="true"></div>
+
+    <!-- Prayer flags SVG -->
+    <svg class="prayer-flags" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <line x1="0" y1="12" x2="1440" y2="12" class="flag-rope"/>
+      <!-- Set 1 -->
+      <rect x="20"  y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0s"/>
+      <rect x="58"  y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.18s"/>
+      <rect x="96"  y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.36s"/>
+      <rect x="134" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.54s"/>
+      <rect x="172" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:0.72s"/>
+      <!-- Set 2 -->
+      <rect x="230" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.2s"/>
+      <rect x="268" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.38s"/>
+      <rect x="306" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.56s"/>
+      <rect x="344" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.74s"/>
+      <rect x="382" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:0.92s"/>
+      <!-- Set 3 -->
+      <rect x="440" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.05s"/>
+      <rect x="478" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.23s"/>
+      <rect x="516" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.41s"/>
+      <rect x="554" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.59s"/>
+      <rect x="592" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:0.77s"/>
+      <!-- Set 4 -->
+      <rect x="650" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.3s"/>
+      <rect x="688" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.48s"/>
+      <rect x="726" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.66s"/>
+      <rect x="764" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.84s"/>
+      <rect x="802" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:1.02s"/>
+      <!-- Set 5 -->
+      <rect x="860" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.12s"/>
+      <rect x="898" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.3s"/>
+      <rect x="936" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.48s"/>
+      <rect x="974" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.66s"/>
+      <rect x="1012" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:0.84s"/>
+      <!-- Set 6 -->
+      <rect x="1070" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.25s"/>
+      <rect x="1108" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.43s"/>
+      <rect x="1146" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.61s"/>
+      <rect x="1184" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.79s"/>
+      <rect x="1222" y="12" width="30" height="38" fill="#F4C430" class="flag-rect" style="animation-delay:0.97s"/>
+      <!-- Set 7 -->
+      <rect x="1280" y="12" width="30" height="38" fill="#2196F3" class="flag-rect" style="animation-delay:0.1s"/>
+      <rect x="1318" y="12" width="30" height="38" fill="#f5f5f5" class="flag-rect" style="animation-delay:0.28s"/>
+      <rect x="1356" y="12" width="30" height="38" fill="#E53935" class="flag-rect" style="animation-delay:0.46s"/>
+      <rect x="1394" y="12" width="30" height="38" fill="#43A047" class="flag-rect" style="animation-delay:0.64s"/>
+    </svg>
+
+    <!-- Mountain silhouettes -->
+    <svg class="hero-mountains" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
+      <!-- Back range — Himalayan peaks clustered on the LEFT (Dochula), descending to the right (Punakha) -->
+      <polygon points="0,240 0,50 90,30 200,60 330,35 480,65 620,55 760,82 900,105 1060,120 1220,136 1380,148 1440,152 1440,240" fill="rgba(0,50,20,0.45)"/>
+      <!-- Mid range — valley walls sloping down left→right -->
+      <polygon points="0,240 0,115 110,100 250,115 390,98 530,118 670,128 810,138 960,148 1110,155 1270,162 1440,170 1440,240" fill="rgba(0,35,15,0.55)"/>
+      <!-- Front hills — the descent slope, high on left and dropping right toward Punakha -->
+      <polygon points="0,240 0,148 130,138 270,148 410,135 550,145 690,140 830,152 970,160 1110,167 1260,175 1440,184 1440,240" fill="rgba(27,67,50,0.88)"/>
+    </svg>
+
+    <!-- Downhill rider scene -->
+    <div class="hero-rider" aria-hidden="true">
+      <svg class="rider-svg" viewBox="0 0 380 215" fill="none" aria-hidden="true">
+
+        <!-- Speed lines trailing behind the bike -->
+        <g class="speed-lines">
+          <line class="sl sl-1" x1="8"  y1="118" x2="118" y2="118" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round"/>
+          <line class="sl sl-2" x1="18" y1="136" x2="98"  y2="136" stroke="rgba(255,255,255,0.20)" stroke-width="2"   stroke-linecap="round"/>
+          <line class="sl sl-3" x1="28" y1="104" x2="78"  y2="104" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="sl sl-4" x1="4"  y1="152" x2="92"  y2="152" stroke="rgba(255,255,255,0.20)" stroke-width="2"   stroke-linecap="round"/>
+          <line class="sl sl-5" x1="38" y1="90"  x2="68"  y2="90"  stroke="rgba(255,255,255,0.10)" stroke-width="1"   stroke-linecap="round"/>
+        </g>
+
+        <!-- Bike + rider tilted +12° clockwise so front wheel is lower — downhill -->
+        <g transform="rotate(12 192 168)">
+
+          <!-- REAR WHEEL -->
+          <circle cx="88"  cy="168" r="42" stroke="#F4C430" stroke-width="4"   fill="none"/>
+          <circle cx="88"  cy="168" r="38" stroke="#F4C430" stroke-width="1"   fill="none" opacity="0.22"/>
+          <circle cx="88"  cy="168" r="6"  fill="#F4C430"/>
+          <g class="rear-spokes" style="transform-box:fill-box;transform-origin:center">
+            <line x1="88"  y1="126" x2="88"  y2="210" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="46"  y1="168" x2="130" y2="168" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="58"  y1="138" x2="118" y2="198" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="118" y1="138" x2="58"  y2="198" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+          </g>
+
+          <!-- FRONT WHEEL -->
+          <circle cx="292" cy="168" r="42" stroke="#F4C430" stroke-width="4"   fill="none"/>
+          <circle cx="292" cy="168" r="38" stroke="#F4C430" stroke-width="1"   fill="none" opacity="0.22"/>
+          <circle cx="292" cy="168" r="6"  fill="#F4C430"/>
+          <g class="front-spokes" style="transform-box:fill-box;transform-origin:center">
+            <line x1="292" y1="126" x2="292" y2="210" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="250" y1="168" x2="334" y2="168" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="262" y1="138" x2="322" y2="198" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+            <line x1="322" y1="138" x2="262" y2="198" stroke="#F4C430" stroke-width="1.8" opacity="0.70"/>
+          </g>
+
+          <!-- FRAME -->
+          <line x1="88"  y1="168" x2="180" y2="168" stroke="#fff" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="88"  y1="168" x2="155" y2="103" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="180" y1="168" x2="155" y2="103" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="180" y1="168" x2="272" y2="115" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="155" y1="103" x2="272" y2="115" stroke="#fff" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="272" y1="115" x2="280" y2="143" stroke="#fff" stroke-width="5"   stroke-linecap="round"/>
+          <line x1="276" y1="129" x2="292" y2="168" stroke="#fff" stroke-width="3"   stroke-linecap="round"/>
+
+          <!-- HANDLEBARS (aero drop bar) -->
+          <line x1="272" y1="115" x2="270" y2="102" stroke="#fff"    stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M255 103 Q268 96 285 105"          stroke="#F4C430" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <circle cx="254" cy="103" r="3.5" fill="#F4C430"/>
+          <circle cx="285" cy="105" r="3.5" fill="#F4C430"/>
+
+          <!-- SEAT POST & SADDLE -->
+          <line x1="167" y1="128" x2="158" y2="97"  stroke="#fff"    stroke-width="3" stroke-linecap="round"/>
+          <path d="M149 94 Q159 89 172 92"            stroke="#F4C430" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+          <!-- CHAINRING + SPINNING CRANK ARMS -->
+          <circle cx="180" cy="168" r="18" stroke="#F4C430" stroke-width="2.5" fill="none"/>
+          <g class="crank-spin" style="transform-box:fill-box;transform-origin:center">
+            <line x1="180" y1="168" x2="196" y2="153" stroke="#E08500" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="197" cy="152" r="4.5" fill="#E08500"/>
+            <line x1="180" y1="168" x2="164" y2="183" stroke="#E08500" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="163" cy="184" r="4.5" fill="#E08500"/>
+          </g>
+
+          <!-- RIDER — aggressive downhill tuck -->
+          <!-- Far leg (left, recovery) -->
+          <line x1="153" y1="94"  x2="135" y2="130" stroke="#F4C430" stroke-width="5.5" stroke-linecap="round" opacity="0.72"/>
+          <line x1="135" y1="130" x2="155" y2="158" stroke="#F4C430" stroke-width="4.5" stroke-linecap="round" opacity="0.72"/>
+          <rect x="150" y="157" width="21" height="8" rx="3.5" fill="#2D6A4F" opacity="0.85"/>
+          <!-- Near leg (right, power phase) -->
+          <line x1="157" y1="91"  x2="188" y2="133" stroke="#F4C430" stroke-width="6"   stroke-linecap="round"/>
+          <line x1="188" y1="133" x2="197" y2="163" stroke="#F4C430" stroke-width="5"   stroke-linecap="round"/>
+          <rect x="192" y="163" width="24" height="9" rx="3.5" fill="#2D6A4F"/>
+          <!-- Torso — nearly horizontal, full aero tuck -->
+          <ellipse cx="220" cy="80" rx="40" ry="11" fill="#F4C430" opacity="0.94" transform="rotate(-18 220 80)"/>
+          <!-- Arms -->
+          <line x1="230" y1="74" x2="268" y2="100" stroke="#F4C430" stroke-width="5"   stroke-linecap="round"/>
+          <line x1="222" y1="79" x2="260" y2="103" stroke="#F4C430" stroke-width="4"   stroke-linecap="round" opacity="0.74"/>
+          <!-- Head + aero helmet -->
+          <ellipse cx="265" cy="67" rx="17" ry="14" fill="#F4C430"/>
+          <path d="M248 68 Q249 51 265 49 Q281 51 282 68 Z" fill="#2D6A4F"/>
+          <rect x="247" y="66" width="36" height="6" rx="3" fill="#2D6A4F"/>
+          <line x1="281" y1="69" x2="290" y2="72" stroke="#F4C430" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="252" y1="67" x2="257" y2="73" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+
+        </g>
+
+        <!-- Slope ground reference — descends from left to right -->
+        <line x1="0" y1="192" x2="380" y2="210" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-dasharray="10 6"/>
+
+        <!-- Dust puffs from rear wheel -->
+        <circle class="dust d1" cx="60"  cy="206" r="3.5" fill="rgba(255,255,255,0.28)"/>
+        <circle class="dust d2" cx="42"  cy="200" r="2.5" fill="rgba(255,255,255,0.18)"/>
+        <circle class="dust d3" cx="74"  cy="210" r="2"   fill="rgba(255,255,255,0.22)"/>
+        <circle class="dust d4" cx="28"  cy="203" r="1.5" fill="rgba(255,255,255,0.13)"/>
+
+      </svg>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="flag-emoji">🇧🇹</span>
+        Kingdom of Bhutan · Himalayan Cycling
+      </div>
+
+      <h1 class="hero-h1">
+        Pure Downhill
+        <span class="line-accent">Bliss.</span>
+      </h1>
+
+      <p class="hero-route" aria-label="Route: Dochula Pass to Punakha Valley">
+        Dochula Pass
+        <span class="arrow" aria-hidden="true">→</span>
+        Punakha Valley
+      </p>
+
+      <div class="hero-stats" role="list" aria-label="Key ride statistics">
+        <div class="h-stat" role="listitem">
+          <span class="h-stat-num">9,100<sup>ft</sup></span>
+          <span class="h-stat-lbl">Start Elevation</span>
+        </div>
+        <div class="h-stat" role="listitem">
+          <span class="h-stat-num">30<sup>km</sup></span>
+          <span class="h-stat-lbl">Pure Downhill</span>
+        </div>
+        <div class="h-stat" role="listitem">
+          <span class="h-stat-num">1,900<sup>m</sup></span>
+          <span class="h-stat-lbl">Total Descent</span>
+        </div>
+        <div class="h-stat" role="listitem">
+          <span class="h-stat-num">0</span>
+          <span class="h-stat-lbl">Uphills. Ever.</span>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#book"       class="btn btn-primary">🚴 Book Your Ride</a>
+        <a href="#experience" class="btn btn-ghost">See the Route</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" role="button" tabindex="0" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+        <path d="M9 13L2 6h14L9 13z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ─── ALTITUDE STRIP ────────────────────────────────────────────── -->
+  <div id="altitude-strip" aria-label="Ride statistics">
+    <div class="altitude-grid">
+      <div class="alt-stat reveal">
+        <div class="alt-icon" aria-hidden="true">🏔️</div>
+        <span class="alt-num" data-count="1900" data-suffix="m" aria-label="1900 metres descent">1900m</span>
+        <span class="alt-label">Total Descent</span>
+      </div>
+      <div class="alt-stat reveal reveal-delay-1">
+        <div class="alt-icon" aria-hidden="true">🌡️</div>
+        <span class="alt-num" style="font-size:2rem; letter-spacing:0.02em;">All Year</span>
+        <span class="alt-label">Round Season</span>
+      </div>
+      <div class="alt-stat reveal reveal-delay-2">
+        <div class="alt-icon" aria-hidden="true">🚫</div>
+        <span class="alt-num" style="font-size:2rem;">Zero</span>
+        <span class="alt-label">Uphill. Ever.</span>
+      </div>
+      <div class="alt-stat reveal reveal-delay-3">
+        <div class="alt-icon" aria-hidden="true">⭐</div>
+        <span class="alt-num" data-count="100" data-suffix="%" aria-label="100 percent smiles">100%</span>
+        <span class="alt-label">Smiles Delivered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── THE EXPERIENCE ────────────────────────────────────────────── -->
+  <section id="experience" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="experience-intro">
+        <p class="eyebrow center-eye">The Bike Bhutan Experience</p>
+        <h2 class="section-h2 center-h2" id="exp-heading">
+          One <em>Ultra</em> Descent
+        </h2>
+        <p class="section-lead wide" style="text-align:center; margin:16px auto 0;">
+          We don't make you choose between adrenaline and culture — you get both.
+          Thirty kilometres of gravity-fed joy, paired with stops at Bhutan's most
+          sacred and stunning sites. One ride. One unforgettable day.
+        </p>
+      </div>
+
+      <!-- Signature Card -->
+      <article class="experience-card reveal" aria-label="The Bike Bhutan signature ride">
+
+        <div class="card-top">
+          <div class="card-badge">⚡ The Signature Ride · 🏯 Ancient Kingdom</div>
+          <h3 class="card-title">
+            Adrenaline <span class="gold">+</span> Ancient Bhutan,<br/>
+            <span class="gold">All in One Descent</span>
+          </h3>
+          <p class="card-tagline">
+            Clip in at 9,100 feet. Feel the mountain wind. Roll past rhododendron forests
+            and prayer flags strung between the pines. Stop where the centuries-old temples
+            stand. Then keep flying. By the time you reach Punakha Valley, you'll have done
+            something almost no traveller ever gets to do.
+          </p>
+        </div>
+
+        <div class="card-pillars">
+          <div class="pillar">
+            <p class="pillar-eyebrow">⚡ The Thrill</p>
+            <h4>Pure Downhill, Zero Uphill</h4>
+            <p>
+              30 kilometres of winding Himalayan road. Gravity does the heavy lifting.
+              You just lean in, let go, and grin the entire way down to the warm valley floor.
+            </p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-eyebrow">🏯 The Culture</p>
+            <h4>600 Years of Living History</h4>
+            <p>
+              Sacred chortens, ancient temples, Bhutan's most beautiful fortress.
+              Your guide brings every site to life with stories you won't find in any guidebook.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-body-header">
+            <h4>What This Ride Delivers</h4>
+            <p>Every Bike Bhutan ride includes the descent and the cultural stops. One price. One incredible day.</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🏔️</span>
+              <p><strong>Start at Dochula Pass</strong> — 9,100 ft with jaw-dropping panoramas of the high Himalayas and 108 sacred memorial chortens</p>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⬇️</span>
+              <p><strong>Descend 1,900 vertical metres</strong> through ancient rhododendron forest all the way to the warm, subtropical Punakha Valley</p>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🛕</span>
+              <p><strong>Visit Chimi Lhakhang</strong> — the 15th-century Fertility Temple set in terraced golden rice paddy fields</p>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🎋</span>
+              <p><strong>Cross the Punakha Suspension Bridge</strong> — 160 m of swaying prayer flags above the turquoise Po Chhu River</p>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🏰</span>
+              <p><strong>Finish at Punakha Dzong</strong> — Bhutan's most beautiful fortress-monastery, built in 1637 at the river confluence</p>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🧭</span>
+              <p><strong>Your guide rides the whole way</strong> — leading, narrating, and making absolutely sure you have a blast from start to finish</p>
+            </div>
+          </div>
+
+          <div class="card-cta-wrap">
+            <a href="#book" class="btn-card-cta">
+              🚴 Book the Ride →
+            </a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- ─── CULTURAL STOPS ────────────────────────────────────────────── -->
+  <section id="culture" aria-labelledby="culture-heading">
+    <div class="container">
+      <div class="culture-intro">
+        <p class="eyebrow center-eye">Cultural Route Highlights</p>
+        <h2 class="section-h2 center-h2" id="culture-heading">
+          Ride Through <em>Living History</em>
+        </h2>
+        <p class="section-lead wide" style="text-align:center; margin:16px auto 0;">
+          Bhutan is the world's last great Himalayan Buddhist kingdom — and this route
+          takes you right through the heart of it. Every stop has a story. Your guide
+          makes sure you leave knowing this extraordinary country far better than when you arrived.
+        </p>
+      </div>
+
+      <div class="stops-timeline">
+
+        <!-- Stop 1 -->
+        <div class="stop reveal" aria-label="Stop 1: Dochula Pass">
+          <div class="stop-icon-wrap" aria-hidden="true">🏔️</div>
+          <div class="stop-body">
+            <div class="stop-photo-wrap">
+              <img
+                class="stop-photo"
+                src="images/hero-dochula-panorama.jpg"
+                loading="lazy"
+                width="720"
+                height="280"
+                alt="The 108 Druk Wangyal Chortens at Dochula Pass with Himalayan peaks in the background"
+              />
+              <!-- Fallback when image is missing -->
+              <noscript>
+                <div class="stop-placeholder">
+                  <span>🏔️</span>
+                  <span>Dochula Pass · Image loading</span>
+                </div>
+              </noscript>
+            </div>
+            <p class="stop-elevation">Start · 3,100 m (9,100 ft)</p>
+            <h3 class="stop-name">Dochula Pass — Where the Ride Begins</h3>
+            <p class="stop-desc">
+              Arrive to one of Bhutan's most iconic panoramas. On a clear day you'll see over a dozen
+              Himalayan peaks stretching across the horizon — including Gangkar Puensum, Bhutan's highest
+              mountain at 7,570 m. Surrounding you are the <strong>108 white memorial chortens (stupas)</strong>,
+              built by the Queen Mother in 2004, and the beautiful Druk Wangyal Lhakhang temple adorned
+              with murals depicting a century of Bhutanese monarchy. Catch your breath. Then let go.
+            </p>
+            <span class="stop-tag">📸 Best panorama on the entire route</span>
+          </div>
+        </div>
+
+        <!-- Stop 2 -->
+        <div class="stop reveal" aria-label="Stop 2: Bhutanese village family encounter">
+          <div class="stop-icon-wrap" aria-hidden="true">👨‍👩‍👧</div>
+          <div class="stop-body">
+            <div class="stop-photo-wrap">
+              <img
+                class="stop-photo"
+                src="images/stop-mom-daughter.jpg"
+                loading="lazy"
+                width="720"
+                height="280"
+                alt="A Bhutanese mother and her young daughter smiling outside their home in a mountain village"
+              />
+            </div>
+            <p class="stop-elevation">Descent · ~2,400 m</p>
+            <h3 class="stop-name">Meet a Bhutanese Family</h3>
+            <p class="stop-desc">
+              As you weave through forested switchbacks you'll pass small roadside villages where families
+              live much as they have for generations. We stop to say hello. Curious children peek around
+              doorways, mothers wave from porches, and your guide — who knows these families — translates
+              the laughter in both directions. These small, warm moments are what travellers tell us they
+              remember most. <em>This is the real Bhutan, not the postcard version.</em>
+            </p>
+            <span class="stop-tag">😊 The warmest people in the Himalayas</span>
+          </div>
+        </div>
+
+        <!-- Stop 3 -->
+        <div class="stop reveal" aria-label="Stop 3: Punakha Suspension Bridge">
+          <div class="stop-icon-wrap" aria-hidden="true">🎋</div>
+          <div class="stop-body">
+            <div class="stop-photo-wrap">
+              <img
+                class="stop-photo"
+                src="images/stop-suspension-bridge.jpg"
+                loading="lazy"
+                width="720"
+                height="280"
+                alt="Punakha Suspension Bridge strung with colourful prayer flags above the turquoise Po Chhu River"
+              />
+            </div>
+            <p class="stop-elevation">Approaching Punakha · ~1,400 m</p>
+            <h3 class="stop-name">Punakha Suspension Bridge</h3>
+            <p class="stop-desc">
+              Cross the longest suspension bridge in Bhutan — stretching 160 metres above the turquoise
+              <strong>Po Chhu River</strong>, draped in thousands of colourful prayer flags whose printed
+              mantras are carried by the breeze to bless all who pass. Built in 1997 to connect remote
+              villages to Punakha town, today it's one of those views you never want to leave. Look upriver.
+              Look down. Let the bridge sway.
+            </p>
+            <span class="stop-tag">🌉 Look down — it's stunning</span>
+          </div>
+        </div>
+
+        <!-- Stop 4 -->
+        <div class="stop reveal" aria-label="Stop 4: Local Farmers Market">
+          <div class="stop-icon-wrap" aria-hidden="true">🌶️</div>
+          <div class="stop-body">
+            <div class="stop-photo-wrap">
+              <img
+                class="stop-photo"
+                src="images/stop-farmers-market.jpg"
+                loading="lazy"
+                width="720"
+                height="280"
+                alt="Colourful stalls at a Bhutanese farmers market with fresh vegetables, chillies and mountain produce"
+              />
+            </div>
+            <p class="stop-elevation">Punakha Valley · ~1,300 m</p>
+            <h3 class="stop-name">The Local Farmers' Market</h3>
+            <p class="stop-desc">
+              Down on the warm valley floor we pause at a <strong>local farmers' market</strong> where
+              vendors arrive at dawn with what their families grew that morning. Stalls overflow with fiery
+              red chillies, fresh mustard greens, yak-milk datshi cheese, wild ferns, and red rice straight
+              from the Punakha paddies. Try a snack you've never heard of. Trade smiles with the auntie
+              behind the counter. This is everyday Bhutan at its most colourful and most delicious.
+            </p>
+            <span class="stop-tag">🌶️ Chillies, mountain cheese, and stories</span>
+          </div>
+        </div>
+
+        <!-- Stop 5 -->
+        <div class="stop reveal" aria-label="Stop 5: Punakha Dzong">
+          <div class="stop-icon-wrap" aria-hidden="true">🏰</div>
+          <div class="stop-body">
+            <div class="stop-photo-wrap">
+              <img
+                class="stop-photo"
+                src="images/stop-punakha-dzong.jpg"
+                loading="lazy"
+                width="720"
+                height="280"
+                alt="Punakha Dzong fortress-monastery at the confluence of the Mo Chhu and Po Chhu rivers"
+              />
+            </div>
+            <p class="stop-elevation">Finish · 1,200 m</p>
+            <h3 class="stop-name">Punakha Dzong — The Grand Finale</h3>
+            <p class="stop-desc">
+              Your descent ends at arguably the <strong>most beautiful building in all of Bhutan</strong>.
+              Built in 1637, Punakha Dzong — the "Palace of Great Happiness" — sits at the sacred confluence
+              of the Mo Chhu and Po Chhu rivers like a vision from another world. This six-storey white
+              fortress-monastery has been the site of royal coronations since 1907 and remains a living
+              centre of governance and religion. Standing here after your ride, you'll understand exactly
+              why Bhutan is called the Last Shangri-La.
+            </p>
+            <span class="stop-tag">👑 UNESCO Tentative World Heritage Site</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT'S INCLUDED ───────────────────────────────────────────── -->
+  <section id="included" aria-labelledby="included-heading">
+    <div class="container" style="position:relative;">
+      <p class="eyebrow">Everything You Need</p>
+      <h2 class="section-h2 light" id="included-heading">
+        We've Got You <em>Covered</em>
+      </h2>
+      <p class="included-lead">
+        Show up ready to ride. We handle everything else — so you can focus entirely
+        on having the time of your life.
+      </p>
+
+      <div class="included-grid">
+
+        <div class="include-card reveal">
+          <span class="include-emoji" aria-hidden="true">🚴</span>
+          <p class="include-title">Premium Road Bike</p>
+          <p class="include-desc">
+            A quality road bike fitted to your height and perfectly suited to this descent —
+            smooth, responsive, and built to handle every corner of the mountain route with confidence.
+          </p>
+        </div>
+
+        <div class="include-card reveal reveal-delay-1">
+          <span class="include-emoji" aria-hidden="true">⛑️</span>
+          <p class="include-title">Helmet</p>
+          <p class="include-desc">
+            A properly fitted helmet is yours for the ride. Safety is our foundation —
+            we want you to finish as happy as you started, every single time.
+          </p>
+        </div>
+
+        <div class="include-card reveal reveal-delay-2">
+          <span class="include-emoji" aria-hidden="true">🧭</span>
+          <p class="include-title">Expert Local Guide</p>
+          <p class="include-desc">
+            Your Bhutanese guide rides the entire route with you — leading the way,
+            pointing out highlights, and sharing stories about this extraordinary kingdom
+            that you'll be retelling for years.
+          </p>
+        </div>
+
+        <div class="include-card reveal">
+          <span class="include-emoji" aria-hidden="true">🏁</span>
+          <p class="include-title">Start-to-Finish Support</p>
+          <p class="include-desc">
+            We handle all logistics from Dochula Pass to Punakha. No planning, no stress,
+            no confusion about where to go or what to do next. You just ride.
+          </p>
+        </div>
+
+        <div class="include-card reveal reveal-delay-1">
+          <span class="include-emoji" aria-hidden="true">🗺️</span>
+          <p class="include-title">Cultural Narration</p>
+          <p class="include-desc">
+            At every stop your guide brings the history, legend, and spiritual significance
+            to life — context that makes the temples, bridges, and fortress mean so much more.
+          </p>
+        </div>
+
+        <div class="include-card reveal reveal-delay-2">
+          <span class="include-emoji" aria-hidden="true">📸</span>
+          <p class="include-title">Moments That Last</p>
+          <p class="include-desc">
+            Himalayas above you, valley below you, prayer flags in the breeze —
+            this ride delivers memories that stay long after you've gone home.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="you-bring reveal">
+        <h3>You Bring One Thing</h3>
+        <p>
+          A smile — and the expectation of having an absolute blast.
+          That's the only requirement. We'll handle everything else. 😁
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOOKING ───────────────────────────────────────────────────── -->
+  <section id="book" aria-labelledby="book-heading">
+    <div class="container" style="position:relative; z-index:1;">
+      <p class="eyebrow">Ready? Let's Do This</p>
+      <h2 class="section-h2" id="book-heading">
+        Pick Your <em>Time Slot</em> &amp; Ride
+      </h2>
+
+      <div class="book-layout">
+
+        <div class="book-left">
+          <p class="book-left-desc">
+            We run <strong>two departures daily</strong> — morning and afternoon.
+            Both start at Dochula Pass and finish in Punakha Valley.
+            Both are completely downhill. Both are unforgettable.
+          </p>
+
+          <div class="timeslots">
+            <p class="timeslots-label">🕙 Choose Your Departure</p>
+            <div class="slot-grid">
+              <div class="slot">
+                <span class="slot-time">9:30 AM</span>
+                <span class="slot-name">Morning Ride</span>
+                <span class="slot-finish">Finish by 12:30 PM</span>
+              </div>
+              <div class="slot">
+                <span class="slot-time">1:00 PM</span>
+                <span class="slot-name">Afternoon Ride</span>
+                <span class="slot-finish">Finish by 4:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="time-tip">
+            <strong>🌤️ Morning rides</strong> often have the clearest Himalayan views
+            from Dochula Pass — the chance to see the high peaks before clouds roll in.<br/><br/>
+            <strong>☀️ Afternoon rides</strong> catch golden light over the Punakha Valley —
+            spectacular for photography at the suspension bridge and dzong.
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <h3 class="book-card-title">Secure Your Spot</h3>
+          <p class="book-card-sub">
+            Fill in your details — we'll open WhatsApp with everything pre-filled.
+            One tap to send, and we confirm within the hour.
+          </p>
+
+          <!-- Booking form — submits via WhatsApp pre-fill, no backend needed -->
+          <form id="booking-form" class="booking-form" novalidate aria-label="Ride booking form">
+
+            <div class="bk-row">
+              <div class="bk-field">
+                <label class="bk-label" for="bk-name">Your Name <span class="bk-req" aria-hidden="true">*</span></label>
+                <input class="bk-input" type="text" id="bk-name" name="name" required autocomplete="name" placeholder="Jane Smith">
+                <span class="bk-err" aria-live="polite"></span>
+              </div>
+              <div class="bk-field">
+                <label class="bk-label" for="bk-email">Email <span class="bk-req" aria-hidden="true">*</span></label>
+                <input class="bk-input" type="email" id="bk-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                <span class="bk-err" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="bk-row">
+              <div class="bk-field">
+                <label class="bk-label" for="bk-date">Ride Date <span class="bk-req" aria-hidden="true">*</span></label>
+                <input class="bk-input" type="date" id="bk-date" name="date" required>
+                <span class="bk-err" aria-live="polite"></span>
+              </div>
+              <div class="bk-field">
+                <label class="bk-label" for="bk-riders">Riders <span class="bk-req" aria-hidden="true">*</span></label>
+                <select class="bk-input bk-select" id="bk-riders" name="riders" required>
+                  <option value="">Select…</option>
+                  <option value="1">1 person</option>
+                  <option value="2">2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5+">5 or more</option>
+                </select>
+                <span class="bk-err" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="bk-field">
+              <span class="bk-label" id="bk-slot-label">Time Slot <span class="bk-req" aria-hidden="true">*</span></span>
+              <div class="bk-slots" role="radiogroup" aria-labelledby="bk-slot-label">
+                <label class="bk-slot-opt">
+                  <input type="radio" name="slot" value="Morning – 9:30 AM (finish by 12:30 PM)" required>
+                  <span class="bk-slot-card">
+                    <strong class="bk-slot-time">9:30 AM</strong>
+                    <em class="bk-slot-name">Morning · done by 12:30 PM</em>
+                  </span>
+                </label>
+                <label class="bk-slot-opt">
+                  <input type="radio" name="slot" value="Afternoon – 1:00 PM (finish by 4:00 PM)">
+                  <span class="bk-slot-card">
+                    <strong class="bk-slot-time">1:00 PM</strong>
+                    <em class="bk-slot-name">Afternoon · done by 4:00 PM</em>
+                  </span>
+                </label>
+              </div>
+              <span class="bk-err bk-slot-err" aria-live="polite"></span>
+            </div>
+
+            <div class="bk-field">
+              <label class="bk-label" for="bk-phone">
+                Phone / WhatsApp
+                <span class="bk-optional">(optional)</span>
+              </label>
+              <input class="bk-input" type="tel" id="bk-phone" name="phone" autocomplete="tel" placeholder="+975 77 000 000">
+            </div>
+
+            <div class="bk-field">
+              <label class="bk-label" for="bk-notes">
+                Special Requests
+                <span class="bk-optional">(optional)</span>
+              </label>
+              <textarea class="bk-input bk-textarea" id="bk-notes" name="notes" rows="2"
+                placeholder="Dietary needs, mobility notes, group details…"></textarea>
+            </div>
+
+            <!--
+              WHATSAPP NUMBER: Replace 97577000000 below with your real number
+              (country code + number, no + or spaces). Managed in script.js BK_WA_NUM.
+            -->
+            <button type="submit" class="bk-submit-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Send Booking via WhatsApp
+            </button>
+
+            <p class="bk-note">No payment needed to reserve &mdash; we'll confirm your spot within the hour.</p>
+          </form>
+
+          <!-- Success state shown after form submit -->
+          <div class="bk-success" hidden aria-live="polite">
+            <div class="bk-success-icon" aria-hidden="true">🎉</div>
+            <h4 class="bk-success-title">WhatsApp is opening&hellip;</h4>
+            <p class="bk-success-msg">Your booking details are pre-filled. Just tap <strong>Send</strong> in WhatsApp to confirm your spot!</p>
+            <button class="bk-reset-btn">Book another date</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">Bike<span class="accent">Bhutan</span></p>
+          <p>
+            Dochula Pass → Punakha Valley<br/>
+            The Last Shangri-La on two wheels.<br/>
+            Kingdom of Bhutan 🇧🇹
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#experience">The Ride</a></li>
+            <li><a href="#culture">Cultural Stops</a></li>
+            <li><a href="#included">What's Included</a></li>
+            <li><a href="#book">Book Now</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-links">
+          <h4>The Ride</h4>
+          <ul>
+            <li><a href="#experience">30 km Downhill</a></li>
+            <li><a href="#culture">Dochula Pass</a></li>
+            <li><a href="#culture">Punakha Dzong</a></li>
+            <li><a href="#book">Morning &amp; Afternoon Slots</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Bike Bhutan · Kingdom of Bhutan ·
+          <a href="https://wa.me/97577277687" rel="noopener noreferrer" target="_blank" style="color:rgba(255,255,255,0.45); transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">
+            WhatsApp us
+          </a>
+        </p>
+        <div class="footer-flags" aria-label="Bhutan and cycling icons" aria-hidden="true">🇧🇹🏔️🚴🌿☀️</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ───────────────────────────────────────────────────── -->
+  <script src="script.js"></script>
+  <script>
+    // Inline: dynamic year only — keep separate from script.js for CSP friendliness
+    (function () {
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    }());
+  </script>
+
+</body>
+</html>
